@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width-device-width, initial-scale=1.0">
+<title>FROZEN MEAT</title>
+
+<body>
+
+<header>
+  <nav>
+    <a href="index.html" class="active">HOME</a>
+    <a href="SHOP.html">SHOP</a>
+    <a href="CART.html">CARTS</a>
+    <a href="CONTACTS.html">CONTACTS</a>
+    <a href="ABOUT.html">ABOUT US</a>
+  </nav>
+  <a href="#login" class="loginbttn">Login / Sign Up</a> 
+</header>
+
+<section id="BACKGROUND">
+  <div class="SITE_TITLE">
+    <img src="images/STT.png" alt="SITE TITLE">
+  </div>
+
+  <div class="logoanddes">
+    <img src="images/LOGO.png" alt="Logo">
+    <p class="home-description">
+      "From cold to gold, the flavor unfolds — frozen perfection that never gets old.
+      Each cut preserved in time, sealed with care, delivering freshness and taste beyond compare. 
+      Where quality meets the chill, and every bite fulfills
+      — M.B. Frozen Meatshop, where excellence stays cold but the flavor feels bold."
+    </p>
+  </div>
+</section>
+
+<div id="login" class="popup">
+  <div class="popup-box">
+    <a href="#" class="close-btn">&times;</a>
+    <h2>Login</h2>
+    <form>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Log In</button>
+    </form>
+    <p class="switch-link">Don't have an account? <a href="#signup">Sign Up</a></p>
+  </div>
+</div>
+
+<div id="signup" class="popup">
+  <div class="popup-box">
+    <a href="#" class="close-btn">&times;</a>
+    <h2>Sign Up</h2>
+    <form>
+      <input type="text" placeholder="Full Name" required>
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <button type="submit">Sign Up</button>
+    </form>
+    <p class="switch-link">Already have an account? <a href="#login">Login</a></p>
+  </div>
+</div>
+
+</body>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+
+body {
+  color: white;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(7, 21, 36, 0.87);
+  padding: 17.5px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  gap: 270px;
+  position: relative;
+}
+
+nav a {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 10px rgb(41, 141, 255));
+}
+
+nav a:hover {
+     transform: scale(1.05); 
+     filter: drop-shadow(0 0 10px rgb(13, 49, 255));
+     color: rgb(12, 178, 255);
+     box-shadow: inset 10 20 10px rgba(1, 39, 255, 0.521);
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #0350f5;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+nav a.active::after {
+     width: 100%; 
+}
+
+.loginbttn {
+  padding: 10px 20px;
+  background: #0350f5;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+  filter: drop-shadow(0 0 10px rgb(41, 141, 255));
+}
+
+.loginbttn:hover {
+  background: #0350f5ad;
+  transform: scale(1.05);
+}
+
+#BACKGROUND {
+  min-height: 100vh;
+  background: url(images/INDEX\ BG.jpeg) no-repeat center center/cover;
+  color: white;
+  position: relative;
+  padding-top: 120px;
+}
+
+.logoanddes {
+  position: absolute;
+  top: 140px;
+  left: 80px;
+  z-index: 900;
+  max-width: 450px;
+}
+
+.logoanddes img {
+  width: 450px;
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(41, 141, 255, 0.795));
+}
+
+.home-description {
+  text-align: center;
+  font-size: 25px;
+  line-height: 1.01;
+  padding: 25px 30px;
+  color: hsla(0, 0%, 100%, 0.918);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  background: #82b8ff26;
+  backdrop-filter: blur(1px);
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  filter: drop-shadow(0 0 10px rgb(224, 128, 2));
+}
+
+.SITE_TITLE {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 900;
+  text-align: center;
+}
+
+.SITE_TITLE img {
+  width: 110%;
+  max-width: 110000px;
+  height: auto;
+  filter: drop-shadow(10px 5px 10px rgba(41, 141, 255, 0.795));
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+#login:target, #signup:target {
+  display: flex;
+}
+
+.popup-box {
+  background: #fff;
+  color: #000;
+  padding: 40px;
+  border-radius: 10px;
+  width: 350px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 5px 20px rgba(216, 68, 0, 0.938);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.popup-box h2 {
+  margin-bottom: 20px;
+  color: #0350f5;
+}
+
+.popup-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #1613b4ee;
+  border-radius: 5px;
+}
+
+.popup-box button {
+  width: 100%;
+  padding: 10px;
+  background: #0350f5;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.popup-box button:hover {
+  background: #2967ff;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: #000;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.close-btn:hover {
+  color: #0350f5;
+}
+
+.switch-link {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.switch-link a {
+  color: #0350f5;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.switch-link a:hover {
+  text-decoration: underline;
+}
+</style>
+</head>
+
+
+</html>

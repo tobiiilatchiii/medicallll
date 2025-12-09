@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CONTACTS - FROZEN MEAT</title>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="SHOP.html">SHOP</a>
+        <a href="CART.html">CARTS</a>
+        <a href="CONTACTS.html" class="active">CONTACTS</a>
+        <a href="ABOUT.html">ABOUT US</a>
+    </nav>
+    <a href="#login" class="loginbttn">Login / Sign Up</a>
+</header>
+
+<div class="banner">
+    <img src="images/LOGO.png" class="header-logo" alt="Logo">
+</div>
+
+<div id="main-content-wrapper">
+    <div id="scroll-wrapper">
+        <div class="stack">
+
+            <div class="card" style="background-image:url(images/banner.jpeg)">
+                <a href="https://www.facebook.com/linatoc.jr.rodelito" target="_blank">FACEBOOK</a>
+            </div>
+
+            <div class="card" style="background-image:url(images/banner.jpeg)">
+                <a href="https://www.instagram.com/direct/t/17842320944801246/" target="_blank">INSTAGRAM</a>
+            </div>
+
+            <div class="card" style="background-image:url(images/banner.jpeg)">
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRnZfcrlCRnpKbxmQSsKlBFSQZkVNZfDbfkcmJKdGdLznZbhQtvjPVXtcMCwdrJMPFlgFzG" target="_blank">EMAIL</a>
+            </div>
+
+            <div class="card" style="background-image:url(images/banner.jpeg)">
+                <a href="https://x.com/messages/1882547824380055552-1991830265908674560">TWEETER</a>
+            </div>
+
+            <div class="card" style="background-image:url(images/banner.jpeg)">
+                <a href="https://www.google.com/maps/place/Bulacnin+boundary" target="_blank">MAIN SHOP LOCATION</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(7, 21, 36, 0.87);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(7, 21, 36, 0.87);
+    padding: 17.5px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    gap: 270px;
+}
+
+nav a {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 10px rgb(41, 141, 255));
+}
+
+nav a:hover {
+    transform: scale(1.05);
+    color: rgb(12, 178, 255);
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: #0350f5;
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+nav a.active::after {
+    width: 100%;
+}
+
+.loginbttn {
+    padding: 10px 20px;
+    background: #0350f5;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    filter: drop-shadow(0 0 10px rgb(41, 141, 255));
+    transition: 0.3s;
+}
+
+.loginbttn:hover {
+    background: #0350f5ad;
+    transform: scale(1.05);
+}
+
+.banner {
+    position: fixed;
+    top: 73px;
+    left: 0;
+    width: 100%;
+    height: 130px;
+    background: url(images/banner.jpeg) no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.header-logo {
+    width: 150px;
+    filter: drop-shadow(0 0 12px rgba(41, 141, 255, 0.8));
+}
+
+#main-content-wrapper {
+    height: calc(100vh - 203px);
+    width: 100%;
+    overflow-y: auto;
+    margin-top: 203px;
+    background: url(images/SHOP\ BG.jpeg) no-repeat center center/cover;
+    background-color: rgba(86, 168, 255, 0.877);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#main-content-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+#scroll-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.stack {
+    position: relative;
+    width: 1500px;
+    height: 520px;
+}
+
+.card {
+    position: absolute;
+    width: 95%;
+    height: 65%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+    transition: 0.6s;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid rgba(255,255,255,0.4);
+    background-blend-mode: overlay;
+    background-color: rgb(21, 59, 105);
+    z-index: 1;
+}
+
+.card a {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 0 15px #000;
+}
+
+.card.active {
+    transform: translate(-50%, -50%) scale(1) translateZ(80px);
+    opacity: 1;
+    box-shadow: 0 0 35px rgba(0, 200, 255, 1);
+    z-index: 5;
+}
+
+.card.next {
+    transform: translate(-50%, calc(-50% + 170px)) scale(0.78) translateZ(-60px);
+    opacity: 0.7;
+    z-index: 2;
+}
+
+.card.prev {
+    transform: translate(-50%, calc(-50% - 170px)) scale(0.78) translateZ(-60px);
+    opacity: 0.7;
+    z-index: 2;
+}
+
+</style>
+
+<script>
+
+let index = 0;
+const cards = document.querySelectorAll(".card");
+
+function assignClasses() {
+    cards.forEach(c => c.classList.remove("active","next","prev"));
+    cards[index].classList.add("active");
+    cards[(index + 1) % cards.length].classList.add("next");
+    cards[(index - 1 + cards.length) % cards.length].classList.add("prev");
+}
+
+assignClasses();
+
+let lock = false;
+
+window.addEventListener("wheel", e => {
+    if (lock) return;
+    lock = true;
+
+    if (e.deltaY > 0) index = (index + 1) % cards.length;
+    else index = (index - 1 + cards.length) % cards.length;
+
+    assignClasses();
+
+    setTimeout(() => lock = false, 650);
+});
+
+</script>

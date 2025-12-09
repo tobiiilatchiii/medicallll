@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>SHOP - CHICKEN SECTION</title>
+</head>
+
+<body>
+
+<header>
+  <nav>
+    <a href="index.html">HOME</a>
+    <a href="SHOP.html" class="active">SHOP</a>
+    <a href="CART.html">CARTS</a>
+    <a href="CONTACTS.html">CONTACTS</a>
+    <a href="ABOUT.html">ABOUT US</a>
+  </nav>
+  <a href="#login" class="loginbttn">Login / Sign Up</a>
+</header>
+
+<div class="second-header">
+    <img src="images/LOGO.png" class="header-logo">
+</div>
+
+<div id="main-content-wrapper">
+    <h1 class="section-title">CHICKEN</h1>
+
+    <div class="product-grid">
+
+        <div class="product-card" data-name="CHICKEN BREAST" data-price="200" data-image="images/CHICKEN LAMAN.jpeg">
+            <img src="images/CHICKEN LAMAN.jpeg">
+            <div class="product-name">CHICKEN BREAST</div>
+            <div class="product-price">₱200</div>
+
+            <div class="qty-control">
+                <button class="qty-btn minus">-</button>
+                <input type="number" class="qty-input" min="1" value="1">
+                <button class="qty-btn plus">+</button>
+            </div>
+
+            <button class="add-to-cart-btn">ADD TO CART</button>
+        </div>
+
+        <div class="product-card" data-name="CHICKEN WINGS" data-price="210" data-image="images/WINGS.jpeg">
+            <img src="images/WINGS.jpeg">
+            <div class="product-name">CHICKEN WINGS</div>
+            <div class="product-price">₱210</div>
+
+            <div class="qty-control">
+                <button class="qty-btn minus">-</button>
+                <input type="number" class="qty-input" min="1" value="1">
+                <button class="qty-btn plus">+</button>
+            </div>
+
+            <button class="add-to-cart-btn">ADD TO CART</button>
+        </div>
+
+        <div class="product-card" data-name="CHICKEN LEGS" data-price="190" data-image="images/LEGS.jpeg">
+            <img src="images/LEGS.jpeg">
+            <div class="product-name">CHICKEN LEGS</div>
+            <div class="product-price">₱190</div>
+
+            <div class="qty-control">
+                <button class="qty-btn minus">-</button>
+                <input type="number" class="qty-input" min="1" value="1">
+                <button class="qty-btn plus">+</button>
+            </div>
+
+            <button class="add-to-cart-btn">ADD TO CART</button>
+        </div>
+
+    </div>
+</div>
+
+<div id="toast">Added to cart!</div>
+
+<div id="login" class="popup">
+  <div class="popup-box">
+    <a class="close-btn" href="#">&times;</a>
+    <h2>Login</h2>
+
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button>Login</button>
+
+    <p>Don't have an account? <a href="#signup">Sign Up</a></p>
+  </div>
+</div>
+
+<div id="signup" class="popup">
+  <div class="popup-box">
+    <a class="close-btn" href="#">&times;</a>
+    <h2>Sign Up</h2>
+
+    <input type="text" placeholder="Full Name">
+    <input type="email" placeholder="Email">
+    <input type="password" placeholder="Password">
+    <button>Sign Up</button>
+
+    <p>Already have an account? <a href="#login">Login</a></p>
+  </div>
+</div>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden;
+    background: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)), url("images/SHOP BG.jpeg") no-repeat center/cover;
+    color: white;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(7,21,36,0.87);
+    padding: 17.5px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    gap: 270px;
+}
+
+nav a {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: 0.25s;
+    filter: drop-shadow(0 0 8px rgb(41,141,255));
+}
+
+nav a:hover {
+    transform: scale(1.05);
+    color: #12b2ff;
+}
+
+nav a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #0350f5;
+    border-radius: 3px;
+}
+
+.loginbttn {
+    padding: 10px 20px;
+    background: #0350f5;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .2s;
+}
+
+.loginbttn:hover {
+    background: #2967ff;
+    transform: scale(1.05);
+}
+
+.second-header {
+    position: fixed;
+    top: 73px;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background: url("images/banner.jpeg") no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.header-logo {
+    width: 150px;
+    filter: drop-shadow(0 0 12px rgba(41,141,255,.8));
+}
+
+#main-content-wrapper {
+    margin-top: 193px;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 45px;
+    font-weight: 900;
+    margin-bottom: 35px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 12px;
+    background: rgba(0, 20, 60, 0.55);
+    border: 2px solid rgba(0, 102, 255, 0.7);
+    backdrop-filter: blur(6px);
+    text-shadow: 0 0 8px #0b7bff, 0 0 15px #0b7bff, 0 0 25px rgba(11,123,255,0.9);
+    box-shadow: 0 0 18px rgba(0,102,255,0.55);
+    letter-spacing: 3px;
+}
+
+.product-grid {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.product-card {
+    width: 320px;
+    background: rgba(0,0,0,0.65);
+    border: 2px solid #555;
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    transition: .25s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    border-color: #0350f5;
+    box-shadow: 0 8px 20px rgba(3,80,245,.3);
+}
+
+.product-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.product-name {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.product-price {
+    color: #3b82ff;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 6px;
+}
+
+.qty-control {
+    margin-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.qty-btn {
+    padding: 6px 10px;
+    background: #0350f5;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.qty-input {
+    width: 55px;
+    padding: 6px;
+    text-align: center;
+    background: #222;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 6px;
+}
+
+.add-to-cart-btn {
+    margin-top: 16px;
+    padding: 10px 16px;
+    background: #0350f5;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 100%;
+}
+
+.add-to-cart-btn:hover {
+    background: #2967ff;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+#login:target,
+#signup:target {
+    display: flex;
+}
+
+.popup-box {
+    background: white;
+    color: black;
+    padding: 40px;
+    width: 350px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.popup-box input,
+.popup-box button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.popup-box button {
+    background: #0350f5;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 22px;
+    text-decoration: none;
+    color: black;
+}
+
+#toast {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,122,255,0.95);
+    color: white;
+    padding: 18px 32px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    display: none;
+    z-index: 5000;
+}
+</style>
+
+<script>
+function getCart() {
+    return JSON.parse(localStorage.getItem("cart")) || [];
+}
+
+function saveCart(cart) {
+    localStorage.setItem("cart", JSON.stringify(cart));
+}
+
+function showToast() {
+    const toast = document.getElementById("toast");
+    toast.style.display = "block";
+    setTimeout(() => toast.style.display = "none", 1300);
+}
+
+document.addEventListener("click", e => {
+    if (e.target.classList.contains("plus")) {
+        let input = e.target.parentElement.querySelector(".qty-input");
+        input.value = Number(input.value) + 1;
+    }
+
+    if (e.target.classList.contains("minus")) {
+        let input = e.target.parentElement.querySelector(".qty-input");
+        if (input.value > 1) input.value = Number(input.value) - 1;
+    }
+
+    if (e.target.classList.contains("add-to-cart-btn")) {
+        let card = e.target.closest(".product-card");
+        let name = card.dataset.name;
+        let price = Number(card.dataset.price);
+        let image = card.dataset.image;
+        let qty = Number(card.querySelector(".qty-input").value);
+
+        let cart = getCart();
+        let existing = cart.find(item => item.name === name);
+
+        if (existing) {
+            existing.quantity += qty;
+        } else {
+            cart.push({ name, price, quantity: qty, image });
+        }
+
+        saveCart(cart);
+        showToast();
+    }
+});
+</script>
+
+</body>
+</html>
